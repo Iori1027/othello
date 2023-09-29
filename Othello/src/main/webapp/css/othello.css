@@ -1,0 +1,52 @@
+@charset "UTF-8";
+:root{
+	--x:0;
+	--y:0;
+}
+html{
+height:100%;
+width:100%;
+font-size : 100%;
+margin-left : auto;
+margin-right : auto;
+text-align : center;
+background-color : #EFEFEF;
+}
+
+div.area{
+	height:100%;
+	text-align:center;
+	caret-color: transparent;
+	max-width: 100%;
+  height: auto;
+}
+div.boad{
+	position:relative;
+	display: inline-block;
+	margin:auto;
+	caret-color: transparent;
+	}
+h1 {
+  font-size: 24px;
+  caret-color: transparent;
+}
+img.board{
+	width:650px;
+}
+button{
+	background: transparent;
+	cursor: pointer;
+	border:width;
+	/*border: none;*/
+}
+.grid{
+	--size:75px;
+	position: absolute;
+    left:calc((var(--size) * var(--x)) - 50px);
+    bottom:calc((var(--size) * var(--y)) - 42px); 
+    width:var(--size);
+    height:var(--size);
+}
+form{
+		margin:auto;
+}
