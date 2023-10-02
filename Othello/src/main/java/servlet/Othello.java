@@ -1,24 +1,20 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import model.Board;
-import model.Computer;
-import model.OthelloLogic;
-import model.Person;
-import model.Stone;
-import model.Player;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import model.Board;
+import model.Computer;
+import model.Person;
+import model.Player;
+import model.Stone;
 
 /**
  * Servlet implementation class Othello
