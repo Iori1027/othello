@@ -19,9 +19,9 @@
 	</c:if>
 	</h1>
 	<jsp:include page="board.jsp"/>
-	<form action="Othello" method="post">
-	<button type="submit" class="next">送る</button>
+	<form action="?" method="?">
+	<button type="submit"  class="next" formmethod="post" formaction="Othello">送る</button>
+	<button type="submit" formmethod="get" formaction="Main">メニューへ</button>
 	</form>
-	<a href="Main"> 戻る </a>
 </body>
 </html>

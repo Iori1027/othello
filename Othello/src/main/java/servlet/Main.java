@@ -39,6 +39,10 @@ public class Main extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("post");
+		RequestDispatcher dispatcher =
+				request.getRequestDispatcher("WEB-INF/jsp/menu.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }
