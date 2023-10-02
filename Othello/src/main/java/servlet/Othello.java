@@ -58,7 +58,8 @@ public class Othello extends HttpServlet {
 		session.setAttribute("player1",player1);
 		session.setAttribute("player2",player2);
 		if (player1 instanceof Computer) {
-			doPost(request,response);
+			request.setAttribute("next","com");
+			dispatcherOthello.forward(request, response);
 			return;
 		}
 		player1.checkPutStone();
@@ -71,7 +72,6 @@ public class Othello extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		//セッションスコープからBoardを取得
 		HttpSession session = request.getSession();
 		Board board = (Board) session.getAttribute("board");
@@ -104,6 +104,12 @@ public class Othello extends HttpServlet {
 		}
 		//継続確認
 		if (board.continuetion()) {
+			if(nextPlayer instanceof Computer) {
+				request.setAttribute("next","com");
+			}
+			else {
+				request.setAttribute("next","person");
+			}
 			board.nextTurn();
 			//if (nextPlayer instanceof Person) {
 			dispatcher.forward(request, response);
