@@ -9,7 +9,7 @@
 <title>オセロ</title>
 </head>
 <body style="margin:0px">
-<h1>オセロゲーム<h1>
+<h1>オセロゲーム</h1>
 	<div class="area">
 		<div class="boad">
 			<img
