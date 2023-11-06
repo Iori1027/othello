@@ -11,7 +11,6 @@
 </head>
 <body>
 	<h1>
-	${next}
 	<c:if  test="${board.turn == 1}">
 	<img src="${pageContext.request.contextPath}/images/game_reversi_black.png" style="width:20px"><c:out value="${player1.name}" />のターン<img src="${pageContext.request.contextPath}/images/game_reversi_black.png" style="width:20px">
 	</c:if>
@@ -21,9 +20,6 @@
 	</h1>
 	<jsp:include page="board.jsp"/>
 	<form action="?" method="?">
-	<c:if test="${next.equals('com')}">
-	<button type="submit"  class="next" formmethod="post" formaction="Othello">次へ</button>
-	</c:if>
 	<button type="submit" formmethod="get" formaction="Main">メニューへ</button>
 	</form>
 </body>

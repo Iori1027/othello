@@ -36,16 +36,26 @@ img.board{
 button{
 	background: transparent;
 	cursor: pointer;
-	border:width;
+	border: width;
 	/*border: none;*/
 }
 .grid{
 	--size:75px;
 	position: absolute;
-    left:calc((var(--size) * var(--x)) - 50px);
+	border-width:thick;
+	border-color: gray;
+    left:calc((var(--size) * var(--x)) - 51px);
     bottom:calc((var(--size) * var(--y)) - 42px); 
     width:var(--size);
     height:var(--size);
+}
+.next{
+	position: absolute;
+	background-color: white;
+	right: 23px;
+    top: -68px;
+    width: 75px;
+    height: 75px;
 }
 form{
 		margin:auto;
